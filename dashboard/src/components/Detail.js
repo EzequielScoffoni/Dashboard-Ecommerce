@@ -13,8 +13,8 @@ function GroupExample() {
         fetch('http://localhost:3100/api/products')
         .then(response => response.json())
         .then(data => {
-           console.log(data.data.quantity)
-            setProductos(data.data.quantity)
+           console.log(data.metadata.quantity)
+            setProductos(data.metadata.quantity)
         }) 
         .catch(error => console.log(error))
     }, []);
