@@ -5,7 +5,7 @@ function Vendidos () {
     const [productosAllV, setProductosV] = useState ([]);
 
     useEffect(() => {
-        fetch("http://localhost:3100/api/products/vendidos")
+        fetch("https://proyectointegradorg10-pmtu.onrender.com/api/products/vendidos")
         .then(response => response.json())
         .then(data => {
             console.log(data)

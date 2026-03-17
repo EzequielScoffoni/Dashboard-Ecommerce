@@ -10,7 +10,7 @@ function GroupExample() {
   const [productosAllV, setProductosV] = useState ([]);
 
     useEffect(() => {
-        fetch('http://localhost:3100/api/products')
+        fetch('https://proyectointegradorg10-pmtu.onrender.com/api/products')
         .then(response => response.json())
         .then(data => {
            console.log(data.metadata.quantity)
@@ -22,7 +22,7 @@ function GroupExample() {
   const [usuarios, setUsuarios] = useState ([]);
 
   useEffect (() => {
-    fetch('http://localhost:3100/api/users/total')
+    fetch('https://proyectointegradorg10-pmtu.onrender.com/api/users/total')
       .then(response => response.json())
       .then(data => {
         setUsuarios(data.metadata.quantity)

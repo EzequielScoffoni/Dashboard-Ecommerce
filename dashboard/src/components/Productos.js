@@ -5,7 +5,7 @@ function Productos () {
     const [productosAll, setProductos] = useState ([]);
 
     useEffect(() => {
-        fetch("http://localhost:3100/api/products")
+        fetch("https://proyectointegradorg10-pmtu.onrender.com/api/products")
         .then(response => response.json())
         .then(data => {
             console.log(data.data.products)
