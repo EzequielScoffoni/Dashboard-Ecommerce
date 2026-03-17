@@ -10,6 +10,7 @@ function GroupExample() {
   const [productosAllV, setProductosV] = useState ([]);
 
     useEffect(() => {
+        //fetch("http://localhost:3100/api/users/total") //Para pruebas locales
         fetch('https://proyectointegradorg10-pmtu.onrender.com/api/products')
         .then(response => response.json())
         .then(data => {
@@ -22,6 +23,7 @@ function GroupExample() {
   const [usuarios, setUsuarios] = useState ([]);
 
   useEffect (() => {
+    //fetch("http://localhost:3100/api/users/total") //Para pruebas locales
     fetch('https://proyectointegradorg10-pmtu.onrender.com/api/users/total')
       .then(response => response.json())
       .then(data => {
@@ -35,7 +37,7 @@ function GroupExample() {
       <Card style= {{ margin: '10px'}}>
         <Card.Body className='cartas'>
           <Card.Title style={{color:'orange', textAlign: 'center'}}>Productos en stock</Card.Title>
-          <Card.Text>
+          <Card.Text style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               <p style={{color:'orange', fontWeight: "bold", padding: "12px", fontSize: "20px" }}>{productosAll}</p>
           </Card.Text>
         </Card.Body>
@@ -43,7 +45,7 @@ function GroupExample() {
       <Card style= {{ margin: '10px'}}>
       <Card.Body className='cartas2'>
           <Card.Title style={{color:'rgb(19, 228, 0)', textAlign: 'center'}}>Productos vendidos</Card.Title>
-          <Card.Text>
+          <Card.Text style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               {/* <p style={{color:'rgb(19, 228, 0)', fontWeight: "bold", padding: "12px", fontSize: "20px" }}>{productosAllV}</p> */}
               <Vendidos {...productosAllV} />
           </Card.Text>
@@ -52,7 +54,7 @@ function GroupExample() {
       <Card style= {{ margin: '10px'}}>
         <Card.Body className='cartas3'>
           <Card.Title style={{color:'blue', textAlign: 'center'}}>Cantidad de usuarios</Card.Title>
-          <Card.Text>
+          <Card.Text style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
               <p style={{color:'blue', fontWeight: "bold", padding: "12px", fontSize: "20px" }}>{usuarios}</p>
           </Card.Text>
         </Card.Body>

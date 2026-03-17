@@ -7,6 +7,7 @@ function BasicExample() {
 
   useEffect (() => {
     console.log('se monto el componente');
+    //fetch("http://localhost:3100/api/users/total") //Para pruebas locales
     fetch('https://proyectointegradorg10-pmtu.onrender.com/api/users/total')
       .then(response => response.json())
       .then(data => {
@@ -35,6 +36,7 @@ function BasicExample() {
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo electronico</th>
+                <th>Rol</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +49,7 @@ function BasicExample() {
                     <td>{usuario.nombre}</td>
                     <td>{usuario.apellido}</td>
                     <td>{usuario.email}</td>
+                    <td>{usuario.rol}</td>
                     </tr>
                   )
                 }) 
